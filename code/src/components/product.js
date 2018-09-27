@@ -6,7 +6,10 @@ class Product extends React.Component {
     return (
       <div className="Product">
           <h2>{this.props.title}</h2>
-          <img className="productImage" src={this.props.image}/>
+          <div className="imageContainer">
+            <img className="productImage" src={this.props.image}/>
+            <p className="description">{this.props.description}</p>
+          </div>
           <p>&#9733; {this.props.type}</p>
           <p>&#9733; {this.props.substance}</p>
           <p>&#9733; {this.props.size}</p>

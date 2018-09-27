@@ -19,7 +19,8 @@ class App extends React.Component {
                             size={product.size}
                             numberInPack={product.numberInPack}
                             deliveryTime={product.deliveryTime}
-                            substance={product.substance}/>
+                            substance={product.substance}
+                            description={product.description}/>
           })}
         </div>
       </div>
