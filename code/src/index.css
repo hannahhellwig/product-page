@@ -1,5 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300|Montserrat:100,400');
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid lightgray;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+}
+
+p {
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.Product {
+  width: calc(25% - 22px);
+  padding: 20px;
+  border: 0.5px solid lightgray;
+  margin: 10px;
+}
+
+.productImage {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.priceAndButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productPrice {
+  font-size: 24px;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Lato', sans-serif;
+}
+
+button:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.productDeliveryTime {
+  text-align: center;
+  color: grey;
+  font-size: 11px;
+}
+@media (max-width: 600px) {
+  .Product {
+    width: calc(100% - 22px);
+  }
+}
+
+@media (min-width:600px) and (max-width: 900px) {
+  .Product {
+    width: calc(50% - 22px);
+  }
 }
