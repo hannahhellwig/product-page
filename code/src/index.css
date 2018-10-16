@@ -36,9 +36,9 @@ p {
 }
 
 .Product {
-  width: calc(25% - 22px);
+  width: calc(25% - 20px);
   padding: 20px;
-  border: 0.5px solid lightgray;
+  border: 1px solid lightgray;
   margin: 10px;
 }
 
@@ -60,10 +60,10 @@ p {
   margin: 0;
   font-size: 16px;
   position: absolute;
-   left: 0px;
-   top: 0px;
-   z-index: 10;
-   display: none;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+  display: none;
 }
 
 .Product:hover .description {
@@ -101,14 +101,15 @@ button:hover {
   color: grey;
   font-size: 11px;
 }
+
 @media (max-width: 600px) {
   .Product {
-    width: calc(100% - 22px);
+    width: calc(100% - 20px);
   }
 }
 
 @media (min-width:600px) and (max-width: 900px) {
   .Product {
-    width: calc(50% - 22px);
+    width: calc(50% - 20px);
   }
 }
