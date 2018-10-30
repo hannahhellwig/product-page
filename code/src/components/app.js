@@ -1,15 +1,32 @@
 import React from "react"
 import Product from "./product.js"
-const productsJson = require("./../products.json")
+// const productsJson = require("./../products.json")
+const productsApi = "http://localhost:8080/products"
 
 class App extends React.Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      products: []
+    }
+  }
+
+  componentDidMount() {
+    fetch(productsApi).then(response => response.json()).then(json => {
+      this.setState({
+        products: json
+      })
+    })
+  }
+
 
   render() {
     return (
       <div>
         <h1>Apotek</h1>
         <div className="App">
-        {productsJson.products.map((product) => {
+        {this.state.products.map((product) => {
             return <Product title={product.name}
                             image={product.image}
                             price={product.price}
